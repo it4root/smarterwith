@@ -1,0 +1,19 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:/dbchangelog/db.changelog-master.yaml
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
